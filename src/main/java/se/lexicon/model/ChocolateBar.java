@@ -1,4 +1,7 @@
-package se.lexicon;
+package se.lexicon.model;
+
+import se.lexicon.util.ChocolateTaste;
+import se.lexicon.util.ProductId;
 
 public class ChocolateBar extends Product{
     private ChocolateTaste taste;
@@ -9,8 +12,8 @@ public class ChocolateBar extends Product{
     }
     public ChocolateTaste getTaste(){return taste;}
 
-    public ChocolateBar(String productName, double price, ChocolateTaste taste) {
-        super(productName, price,ProductId.CHOCOLATE.getId() + taste.getId());
+    public ChocolateBar(String productName, double price, ChocolateTaste taste, String description) {
+        super(productName, price, ProductId.CHOCOLATE.getId(), description);
         setTaste(taste);
     }
 

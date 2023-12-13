@@ -1,4 +1,6 @@
-package se.lexicon;
+package se.lexicon.model;
+
+import se.lexicon.util.ProductId;
 
 public class EnergyDrink extends Product{
 
@@ -8,8 +10,8 @@ public class EnergyDrink extends Product{
 
     public void setSugarAmount(int sugarAmount) { this.sugarAmount = sugarAmount; }
 
-    public EnergyDrink(String productName, double price, int sugarAmount) {
-        super(productName, price, ProductId.ENERGYDRINK.getId());
+    public EnergyDrink(String productName, double price, int sugarAmount, String description) {
+        super(productName, price, ProductId.ENERGYDRINK.getId(), description);
         setSugarAmount(sugarAmount);
     }
 

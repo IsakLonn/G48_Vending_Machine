@@ -1,9 +1,9 @@
-package se.lexicon;
+package se.lexicon.util;
 
 public enum ProductId {
-    CHOCOLATE(3),
+    CHOCOLATE(1),
     SODA(2),
-    ENERGYDRINK(1);
+    ENERGYDRINK(3);
 
     private int id;
 
