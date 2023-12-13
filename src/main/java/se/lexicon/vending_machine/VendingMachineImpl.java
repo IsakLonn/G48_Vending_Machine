@@ -23,7 +23,7 @@ public class VendingMachineImpl implements IVendingMachine{
         return null;
     }
 
-    private Product it (int id) {
+    private Product getProductById(int id) {
         for(Product product : products) {
             if(id == product.getId()) {
                 return product;
