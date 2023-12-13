@@ -1,5 +1,7 @@
 package se.lexicon;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args){
         ChocolateBar bar = new ChocolateBar("mintChocolate", 10, ChocolateTaste.ORANGE);
@@ -15,5 +17,13 @@ public class Main {
 
         System.out.println("Energy drink:");
         System.out.println(monster.getProductName());
+
+        Product [] products = {bar, soda, monster};
+        VendingMachineImpl vendingMachine = new VendingMachineImpl(products);
+        System.out.println(
+                Arrays.toString(vendingMachine.getProducts())
+        );
+        System.out.println("Product Description :" +  vendingMachine.getDescription(2));
+        System.out.println("Get product by id : " + vendingMachine.request(1).toString());
     }
 }
